@@ -1,4 +1,3 @@
-# auth.py
 from flask import Blueprint, request, jsonify, session, g
 from werkzeug.security import generate_password_hash, check_password_hash
 from db import get_db
@@ -51,7 +50,6 @@ def login():
         session['user_id'] = user['id']
         
         # Generate API key for the user if not exists (or regenerate)
-        import uuid
         api_key = str(uuid.uuid4())
         cursor.execute('INSERT INTO api_keys (user_id, api_key) VALUES (?, ?)', (user['id'], api_key))
         db.commit()

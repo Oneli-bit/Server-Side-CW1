@@ -1,4 +1,3 @@
-# app.py
 from flask import Flask
 from db import get_db, close_connection
 from models import init_db

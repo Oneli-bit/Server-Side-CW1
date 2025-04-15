@@ -1,4 +1,3 @@
-# api.py
 from flask import Blueprint, request, jsonify, g
 from db import get_db
 import requests

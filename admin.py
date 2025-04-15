@@ -1,4 +1,3 @@
-# admin.py
 from flask import Blueprint, session, jsonify, get_flashed_messages, g
 from db import get_db
 
