@@ -178,3 +178,6 @@ From the project root, run:
 
 This will start the backend and frontend services in Docker containers.
 
+To stop the docker containers, run:
+```docker-compose down```
+
