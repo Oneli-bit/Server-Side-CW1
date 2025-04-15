@@ -41,8 +41,8 @@ Before starting, ensure you have the following installed:
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/yourusername/yourproject.git
-    cd yourproject
+    git clone git@bitbucket.org:onlilk/server-side.git
+    cd CW1
     ```
 
 2. **Install backend dependencies:**
