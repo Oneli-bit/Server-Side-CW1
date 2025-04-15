@@ -1,0 +1,28 @@
+# Use an official lightweight Python image as the base
+FROM python:3.13-slim
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy only the requirements file first for efficient caching
+COPY requirements.txt .
+
+# Install dependencies from requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the rest of the application code to the container
+COPY . .
+
+# Expose the port that the Flask app runs on
+EXPOSE 5001
+
+# Set environment variables (adjust based on your usage)
+# FLASK_APP points to your application file.
+# ENV FLASK_APP=app.py
+
+# Optionally, you can set FLASK_ENV to 'development' for debugging,
+# but for production deployments this should be set to 'production'.
+# ENV FLASK_ENV=development
+
+# Define the command to run the application
+CMD ["python", "app.py"]
