@@ -1,0 +1,44 @@
+/* src/styles/landing.css */
+.landing-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 70px); /* subtract navbar height */
+    background: linear-gradient(135deg, #e0f7fa, #f4f7fa);
+    padding: 2rem;
+  }
+  
+  .landing-content {
+    max-width: 600px;
+    text-align: center;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  }
+  
+  .landing-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .landing-content p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .landing-buttons .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin: 0 0.5rem;
+    transition: background 0.3s;
+  }
+  
+  .landing-buttons .btn:hover {
+    background-color: #1e40af;
+  }
+  
