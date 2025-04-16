@@ -5,6 +5,7 @@ import uuid  # For generating API keys
 
 auth_bp = Blueprint('auth', __name__)
 
+#For user registration
 @auth_bp.route('/register', methods=['POST'])
 def register():
     """Register a new user."""
@@ -17,6 +18,7 @@ def register():
     if not username or not email or not password:
         return jsonify({'error': 'Missing required fields'}), 400
 
+    #Hash password
     hashed_password = generate_password_hash(password)
     
     try:
@@ -31,6 +33,7 @@ def register():
         # In a production app, log the error and give a user-friendly message
         return jsonify({'error': 'User registration failed', 'details': str(e)}), 500
 
+#For user login
 @auth_bp.route('/login', methods=['POST'])
 def login():
     """User login and API key generation."""
@@ -58,6 +61,7 @@ def login():
     else:
         return jsonify({'error': 'Invalid credentials'}), 401
 
+#For user logout
 @auth_bp.route('/logout', methods=['POST'])
 def logout():
     session.pop('user_id', None)

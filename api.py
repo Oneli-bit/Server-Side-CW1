@@ -29,6 +29,7 @@ def require_api_key(f):
         return f(*args, **kwargs)
     return decorated
 
+#For country data retrievel
 @api_bp.route('/api/country/<country_name>', methods=['GET'])
 @require_api_key
 def get_country(country_name):

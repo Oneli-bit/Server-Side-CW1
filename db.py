@@ -12,7 +12,7 @@ def get_db():
     db.row_factory = sqlite3.Row  # to return dictionaries
     return db
 
-def close_connection(exception):
+def close_connection(exception): #Cleans up the db connection
     db = getattr(g, '_database', None)
     if db is not None:
         db.close()
