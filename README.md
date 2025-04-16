@@ -51,11 +51,11 @@ GitHub Repository:
 ```bash   
     git clone https://github.com/Oneli-bit/Server-Side-CW1.git
     cd Server-Side-CW1
-    ```
+```
 
 2. **Install backend dependencies:**
 
-    Navigate to the `backend` folder and install the Python dependencies:
+    Install the Python dependencies:
 
     ```bash
     pip install -r requirements.txt
