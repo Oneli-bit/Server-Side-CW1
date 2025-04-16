@@ -40,9 +40,17 @@ Before starting, ensure you have the following installed:
 
 1. **Clone the repository:**
 
+Bitbucket Repository:
+
     ```bash
     git clone git@bitbucket.org:onlilk/server-side.git
-    cd CW1
+    cd server-side
+    ```
+GitHub Repository:
+
+```bash   
+    git clone https://github.com/Oneli-bit/Server-Side-CW1.git
+    cd Server-Side-CW1
     ```
 
 2. **Install backend dependencies:**
@@ -50,7 +58,6 @@ Before starting, ensure you have the following installed:
     Navigate to the `backend` folder and install the Python dependencies:
 
     ```bash
-    cd backend
     pip install -r requirements.txt
     ```
 
